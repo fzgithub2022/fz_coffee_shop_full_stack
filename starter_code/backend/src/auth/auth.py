@@ -1,11 +1,11 @@
 import json
 from flask import request, _request_ctx_stack
 from functools import wraps
-from jose import jwt
+from jose import JWT
 from urllib.request import urlopen
 
 
-AUTH0_DOMAIN = 'udacity-fsnd.auth0.com'
+AUTH0_DOMAIN = 'fzauths.auth0.com'
 ALGORITHMS = ['RS256']
 API_AUDIENCE = 'dev'
 
@@ -31,6 +31,7 @@ class AuthError(Exception):
     return the token part of the header
 '''
 def get_token_auth_header():
+    jwt = request.headers['Authentication']
    raise Exception('Not Implemented')
 
 '''
