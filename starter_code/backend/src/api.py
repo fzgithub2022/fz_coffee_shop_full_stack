@@ -16,7 +16,7 @@ CORS(app)
 !! NOTE THIS WILL DROP ALL RECORDS AND START YOUR DB FROM SCRATCH
 !! NOTE THIS MUST BE UNCOMMENTED ON FIRST RUN
 '''
-db_drop_and_create_all()
+#db_drop_and_create_all()
 
 ## ROUTES
 '''
@@ -62,11 +62,7 @@ def get_drinks_detail():
 '''
 @app.route('/drinks', methods=['POST'])
 def post_drinks():
-    try:
-        drinks = Drink.short()
-        return jsonify({"success": True, "drinks": drinks})
-    except:
-        return AuthError('failed to get Drinks', 400)
+    drink = request.headers
 '''
 @TODO implement endpoint
     PATCH /drinks/<id>
