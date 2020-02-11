@@ -30,7 +30,7 @@ db_drop_and_create_all()
 @app.route('/drinks', methods=['GET'])
 def get_drinks():
     try:
-        drinks = Drink.short()
+        drinks = Drink.query.all()
         return jsonify({"success": True, "drinks": drinks}, 200)
     except:
         return AuthError('failed to get Drinks', 400)
