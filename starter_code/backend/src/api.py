@@ -27,7 +27,13 @@ db_drop_and_create_all()
     returns status code 200 and json {"success": True, "drinks": drinks} where drinks is the list of drinks
         or appropriate status code indicating reason for failure
 '''
-
+@app.route('/drinks', methods=['GET'])
+def get_drinks():
+    try:
+        drinks = Drink.short()
+        return jsonify({"success": True, "drinks": drinks}, 200)
+    except:
+        return AuthError('failed to get Drinks', 400)
 
 '''
 @TODO implement endpoint
@@ -37,7 +43,13 @@ db_drop_and_create_all()
     returns status code 200 and json {"success": True, "drinks": drinks} where drinks is the list of drinks
         or appropriate status code indicating reason for failure
 '''
-
+@app.route('/drinks-detail', methods=['GET'])
+def get_drinks_detail():
+    try:
+        drinks = Drink.short()
+        return jsonify({"success": True, "drinks": drinks})
+    except:
+        return AuthError('failed to get Drinks', 400)
 
 '''
 @TODO implement endpoint
@@ -48,8 +60,13 @@ db_drop_and_create_all()
     returns status code 200 and json {"success": True, "drinks": drink} where drink an array containing only the newly created drink
         or appropriate status code indicating reason for failure
 '''
-
-
+@app.route('/drinks', methods=['POST'])
+def post_drinks():
+    try:
+        drinks = Drink.short()
+        return jsonify({"success": True, "drinks": drinks})
+    except:
+        return AuthError('failed to get Drinks', 400)
 '''
 @TODO implement endpoint
     PATCH /drinks/<id>
@@ -61,8 +78,13 @@ db_drop_and_create_all()
     returns status code 200 and json {"success": True, "drinks": drink} where drink an array containing only the updated drink
         or appropriate status code indicating reason for failure
 '''
-
-
+@app.route('/drinks/<id>', methods=['PATCH'])
+def patch_drinks(id):
+    try:
+        drinks = Drink.short()
+        return jsonify({"success": True, "drinks": drinks})
+    except:
+        return AuthError('failed to get Drinks', 400)
 '''
 @TODO implement endpoint
     DELETE /drinks/<id>
@@ -73,7 +95,13 @@ db_drop_and_create_all()
     returns status code 200 and json {"success": True, "delete": id} where id is the id of the deleted record
         or appropriate status code indicating reason for failure
 '''
-
+@app.route('/drinks/<id>', methods=['DELETE'])
+def del_drinks(id):
+    try:
+        drinks = Drink.short()
+        return jsonify({"success": True, "drinks": drinks})
+    except:
+        return AuthError('failed to get Drinks', 400)
 
 ## Error Handling
 '''
@@ -102,9 +130,22 @@ def unprocessable(error):
 @TODO implement error handler for 404
     error handler should conform to general task above 
 '''
-
+@app.errorhandler(404)
+def resource_not_found(error):
+    jsonify({
+                    "success": False, 
+                    "error": 404,
+                    "message": "resource not found"
+                    }),
 
 '''
 @TODO implement error handler for AuthError
     error handler should conform to general task above 
 '''
+@app.errorhandler(401)
+def unauthorized(error):
+    return jsonify({
+        "success": False,
+        "error": 401,
+        "message": "Not authorized"
+    }), 401
