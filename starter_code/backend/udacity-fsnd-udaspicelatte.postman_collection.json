@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e8ad44ee-7536-4901-913c-46e718d56d9f",
+		"_postman_id": "3612dcd9-b7ea-4a7e-b69a-992e3a4fd783",
 		"name": "udacity-fsnd-udaspicelatte",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -30,6 +30,9 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -61,6 +64,9 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -170,7 +176,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "barista",
@@ -379,7 +386,8 @@
 						]
 					}
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "manager",
@@ -584,7 +592,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg4OTU5NiwiZXhwIjoxNTYwODk2Nzk2LCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZHJpbmtzIiwiZ2V0OmRyaW5rcyIsImdldDpkcmlua3MtZGV0YWlsIiwicGF0Y2g6ZHJpbmtzIiwicG9zdDpkcmlua3MiXX0.Qk-5FC2X_RUkK00WKARYCKw_877XFuaT5ND3f3ObD9Ly1e1GMfJXhi3McV12binGGCw6x241erIjGB0t8WbWdU3bYpIVD1klZ64DVLQ8Q2LQ2NzB3eFEOgGLL85az1jIDbRiuATIRbbBOWILPJ6h6KR9L5hExklf2zuj3Bnwm7zMRmVpIJmjrUt4bWjtTOguOwJ0IVQsk4PDjGxzwfrUWFCFNDqN_u15JNLxeH21C-QvCpHs3D4Aodeh1qFUuWHfK_Gyfu91AitXPTVZRX9eZbUOVkGT3JMn4sKn9oGaKFTx2E-Y4DmoECG0uWImbX_wiRjx4aTeo7Q7hKSReMToPA",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik9ESTJSVVV5TlVVMlFqSTJNMEpEUWpsQ1JVSXpOelZCUVVZeVJrTkdORFJHTURBMk0wVXlSQSJ9.eyJpc3MiOiJodHRwczovL2Z6YXV0aC5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU0MWIyM2E5YmZmMmUwZWZhZjlkNTkwIiwiYXVkIjoiZGV2IiwiaWF0IjoxNTgxNTI4MTY0LCJleHAiOjE1ODE1MzUzNjQsImF6cCI6IjhRenl0S0YyNFNCdTZmd0oxQlRKN3phOEp6b3VUbTMwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiLCJwYXRjaDpkcmlua3MiLCJwb3N0OmRyaW5rcyJdfQ.IY6-Qm9WwvvafNLCBIdBTBtlL0V0kVaRnBIxweQV6W45pBcrHjJqieEviKeWFANyIKx0XTqynaVZd96WFQWnS9gxk9TKQP2e9FMsAHAoVGENFFZrIRjHvK3fCqVQTSChg5-c6Ez0ot_k3-hiFGsjqnB0feTV8gONpFImUew_ShsxZVWNorKU7hInl0E8_NDAF-hL-drSDdA2U34BzOciRDhMmhB_GFr7U3dQrlVaPVR3bQYq_V3JKnpWfHMUy7RemPDtJC-IQmS-aBDGOlDLuc7D7C74Iwq_cCMnBngsLyl3c3w0nHwq-_JMQBYIkZ_SJBA5kERY4Etbt0d6gyRSkQ",
 						"type": "string"
 					}
 				]
@@ -610,7 +618,8 @@
 						]
 					}
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"event": [
@@ -642,5 +651,6 @@
 			"value": "localhost:5000",
 			"type": "string"
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
