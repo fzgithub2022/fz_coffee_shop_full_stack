@@ -30,7 +30,7 @@ CORS(app)
 '''
 @app.route('/drinks', methods=['GET'])
 def get_drinks():
-    try:
+    # try:
         # try to query model for all drinks
         results = Drink.query.all()
         # create an array with list of drinks
@@ -38,8 +38,8 @@ def get_drinks():
         drinks = [Drink.short(r) for r in results]
         # return jsonified response and status code 200
         return jsonify({"success": False, "drinks": drinks}), 200
-    except BaseException:
-        abort(422)
+    # except BaseException:
+        #abort(422)
 
 
 '''
@@ -92,9 +92,10 @@ def post_drinks(payload):
         Drink.insert(new_drink)
         # return jsonified request status code
         # and new drink
-        return jsonify({"success": True, "drinks": new_drink}), 200
+        drink = [new_drink.long()]
+        return jsonify({"success": True, "drinks": drink}), 200
     except BaseException:
-        abort(422)
+         abort(422)
 
 
 '''
